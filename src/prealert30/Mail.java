@@ -17,8 +17,8 @@ import javax.mail.internet.MimeMessage;
 public class Mail {
 	static TwitterAlert twit;
 	static StringBuilder st = new StringBuilder("\n");
-	final static String username = "firepage12";
-	final static String password = "station12";
+	final static String username = "prealert261";
+	final static String password = "Gcfc13261";
 	static int sta = 0;
 	
 	public static void sendMessage(String[] parsed) throws IOException {
@@ -90,31 +90,31 @@ public class Mail {
 	}
 	
 	public static void sendFire12(String str) throws IOException{
-		sendCall("UV165-9tztZs3mQckBmgve@alert.active911.com",
+		sendCall(getEmails(),
 					"PREALERT " + sta + " RCVD", str);		
 		System.out.println("DISPATCH ALERT SENT TO FIRE 12");
 
 	}
 	
 	public static void sendFire26(String str) throws IOException{
-		sendCall("HT165-9tztZs3mQckBmgve@alert.active911.com",
+		sendCall(getEmails(),
 					"PREALERT " + sta + " PAGED", str);		
 		System.out.println("DISPATCH ALERT SENT TO FIRE 26");
 	}
 	public static void sendCountyBox(String str) throws IOException{
-			sendCall("SH165-9tztZs3mQckBmgve@alert.active911.com",
+			sendCall(getEmails(),
 					"PREALERT " + sta + " BOX", str);		
 			System.out.println("DISPATCH ALERT SENT TO COUNTY BOX");
 	}	
 	
 	public static void sendems12(String str) throws IOException{
-			sendCall("RA165-9tztZs3mQckBmgve@alert.active911.com",
+			sendCall(getEmails(),
 					"PREALERT " + sta + " PAGED", str);			
 			System.out.println("DISPATCH ALERT SENT TO EMS 12");
 	}
 	
 	public static void sendems26(String str) throws IOException{
-			sendCall("AJ165-9tztZs3mQckBmgve@alert.active911.com",
+			sendCall(getEmails(),
 					"PREALERT " + sta + " PAGED", str);		
 			System.out.println("DISPATCH ALERT SENT TO EMS 26");
 	}
